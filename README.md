@@ -22,3 +22,9 @@
 このアプリは、ユーザーがToDoを追加したり、削除したりすることができるアプリです。
 ToDoは、`todo_list.txt` というファイルに格納されます。
 実行方法: `streamlit run simple_todo.py`
+
+## 4. ダイスロールアプリ(dice_roll.py)
+
+このアプリは、指定した数の多面ダイスを振った結果を取得できるアプリです。
+ダイスの数と面を指定して振ることができます。
+実行方法: `streamlit run dice_roll.py`
