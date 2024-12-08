@@ -7,14 +7,14 @@ TODO_FILE = "todo_list.txt"
 # ファイルからTODOリストを読み込み, リストにして返す
 def load_todos():
     if os.path.exists(TODO_FILE):
-        with open(TODO_FILE, "r") as f:
+        with open(TODO_FILE, "r", encoding="utf-8") as f:
             return f.read().splitlines()
     else:
         return []
 
 # TODOリストをファイルに保存
 def save_todos(todos):
-    with open(TODO_FILE, "w") as f:
+    with open(TODO_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(todos))
 
 # 初期化
