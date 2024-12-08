@@ -12,14 +12,14 @@ if password == SECRET_PASSWORD:
     st.success("合言葉が正解！日記を開くことができます!")
 
     try:
-        with open("diary.txt", "r", encoding="uft-8") as f:
+        with open("diary.txt", "r", encoding="utf-8") as f:
             st.text(f.read())
     except:
         st.warning("まだ日記がありません！")
 
     diary_entry = st.text_area("今日の日記を書く:")
     if st.button("保存する"):
-        with open("diary.txt", "a", encoding="uft-8") as f:
+        with open("diary.txt", "a", encoding="utf-8") as f:
             #datetime.now()は現在時刻を取得する関数。
             save_string = str(datetime.now()) + ": " + diary_entry + "\n" #日付と内容を文字列に追記
             f.write(save_string) #ファイルに書き込む
